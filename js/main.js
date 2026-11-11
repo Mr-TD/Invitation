@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify(payload)
                 });
 
-                showMsg('rsvp-message', `🙏 આભાર ${name}! આપનો RSVP Google Sheet માં નોંધાઈ ગયો છે. અમે આપની સાથે ઉજવણી કરવા ઉત્સુક છીએ! 🎊`, 'success');
+                showMsg('rsvp-message', `🙏 આભાર ${name}! આપનો RSVP નોંધાઈ ગયો છે. અમે આપની સાથે ઉજવણી કરવા ઉત્સુક છીએ! 🎊`, 'success');
                 launchConfetti(80);
                 rsvpForm.reset();
             } catch (err) {
