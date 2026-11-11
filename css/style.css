@@ -245,9 +245,30 @@ body { font-family: var(--font-body); background: var(--cream); color: var(--tex
 .bride-font {
     font-family: var(--font-bride) !important;
 }
-.name-bride      { font-size: 5.8rem !important; }
-.inv-bride-name  { font-size: 3.2rem !important; }
-.couple-name-bride { font-size: 3rem !important; }
+/* Names inherit exactly equal sizes across desktop and mobile */
+.hero-name {
+    display:block;
+    font-size: 5.5rem;
+    color: var(--gold);
+    text-shadow: 0 0 40px rgba(212,168,67,.35);
+    line-height: 1.1;
+}
+.name-groom { font-family: var(--font-script); }
+.name-bride { font-family: var(--font-bride); }
+
+.inv-groom-name, .inv-bride-name {
+    font-size:3rem !important; color:var(--maroon);
+    text-shadow:0 2px 20px rgba(128,0,32,.2); margin:5px 0;
+}
+.inv-groom-name { font-family: var(--font-script); }
+.inv-bride-name { font-family: var(--font-bride); }
+
+.couple-name {
+    font-size:2.8rem !important; color:var(--gold); margin-bottom:6px;
+}
+.couple-person:first-child .couple-name { font-family: var(--font-script); }
+.couple-name-bride { font-family: var(--font-bride) !important; }
+
 /* preloader & footer inline span — inherit size from parent */
 .bride-font { font-size: inherit; }
 .hero-ampersand {
@@ -440,11 +461,6 @@ body { font-family: var(--font-body); background: var(--cream); color: var(--tex
 .groom-frame { background:linear-gradient(135deg, #D4A843, #FFD700, #B8860B); }
 .bride-frame  { background:linear-gradient(135deg, #E8B4B8, #FFD0D8, #C88090); }
 
-.couple-name  { font-family:var(--font-script); font-size:2.8rem; color:var(--gold); margin-bottom:6px; }
-.couple-name-bride {
-    font-family: var(--font-bride) !important;
-    font-size: 3rem !important;
-}
 .couple-role  { font-family:var(--font-elegant); font-size:1rem; color:var(--gold-light); letter-spacing:3px; text-transform:uppercase; margin-bottom:12px; }
 .couple-parents { font-family:var(--font-elegant); font-size:1rem; color:var(--blush); line-height:1.7; opacity:.9; }
 
@@ -667,9 +683,18 @@ body { font-family: var(--font-body); background: var(--cream); color: var(--tex
     .nav-links.active { display:flex; }
     .menu-toggle      { display:flex; }
 
-    .hero-name       { font-size:3.8rem; }
-    .hero-ampersand  { font-size:2.4rem; }
+    .hero-name,
+    .name-groom,
+    .name-bride {
+        font-size: 3.5rem !important;
+    }
+    .hero-ampersand  { font-size:2.2rem; }
     .hero-subtitle-top { font-size:1rem; letter-spacing:3px; }
+
+    .couple-name,
+    .couple-name-bride {
+        font-size: 2.5rem !important;
+    }
 
     .section-title { font-size:2.5rem; }
 
@@ -693,7 +718,19 @@ body { font-family: var(--font-body); background: var(--cream); color: var(--tex
 }
 
 @media (max-width: 480px) {
-    .hero-name  { font-size:2.8rem; }
+    .hero-name,
+    .name-groom,
+    .name-bride {
+        font-size: 2.7rem !important;
+    }
+    .couple-name,
+    .couple-name-bride {
+        font-size: 2.2rem !important;
+    }
+    .inv-groom-name,
+    .inv-bride-name {
+        font-size: 2.2rem !important;
+    }
     .section    { padding:60px 15px; }
     .section-title { font-size:2rem; }
     .countdown-container { gap:14px; }
